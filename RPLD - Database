@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    int t;
+    cin>>t;
+    for(int i=1;i<=t;i++)
+    {
+        int n,r;
+        cin>>n>>r;
+        int a,b;
+        bool p = 1;
+        map<pair<int,int>,bool>vis;
+        while(r--)
+        {
+            cin>>a>>b;
+            if(vis[{a, b}]) p = 0;
+            vis[{a,b}] = 1;
+
+        }
+       if ( p == 1 ) cout << "Scenario #" << i << ": possible" << endl;
+        else cout << "Scenario #" << i << ": impossible" << endl;
+
+    }
+}
